@@ -1,28 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTRO PRODUCCION</title>
+    <link href="/css/estilo.css"
+    rel="stylesheet" type="text/css">
+   <script type="text/javascript" src= "../js/puenteproduccion.js"  charset = "utf-8"></script>
+  
+ 
+    <title>PRODUCCION</title>
 </head>
 <body>
-    <h2>AGREGAR DATOS</h2>  
-    <form action = "produccion.html" method="POST" >
-    FECHA:</br> 
-    <input type="text" class="formulario" name="Fecha"></br>
-    PRODUCTO:</br> 
-    <input type="text" class="formulario" name="Producto"></br>
-    NOMBRE:</br> 
-    <input type="text" class="formulario" name="Nombre"></br>
-    CANTIDAD:</br> 
-    <input type="text" class="formulario" name="Cantidad"></br>
-    PRESENTACION:</br>
-    <input type="text" class="formulario" name="Presentacion"></br>
-    <button>Agregar</button>
- </form> 
- 
- </div>
+    <div class="contenedor" >
+       
+        <h2>AGREGAR PRODUCCION</h2>  
+      <form method="POST" action="../php/produccion1.php" >
+            FECHA:</br> 
+            <input type="date" class="formulario" name="Fecha"></br>
+            PRODUCTO:</br> 
+            <input type="text" class="formulario" name="Producto"></br>
+            CANTIDAD:</br> 
+            <input type="text" class="formulario" name="Cantidad"></br>
+            LOTE:</br> 
+            <input type="text" class="formulario" name="Lote"></br></br>
+            <button>Agregar</button>
+      </form>  
+    </div> 
+  
+    <div class="contenedor1" >
+  
+    </div> 
+  
+    <div class="contenedor2">
+     <table class="default">
+        <thead>
+          <tr>
+            <td>FECHA</td>
+            <td>PRODUCTO</td>
+            <td>CANTIDAD</td>
+            <td>LOTE</td>
+          </tr>
+        </thead>  
+        <tbody id="datostabla"></tbody>
+        <script>buscar()</script>  
+      </table>
+    </div>
+    
+    <div id="columna">
+      <span id="texto">Cantidad</span>
+      
+    </div>
+
+    <div id="columna1">
+      <span id="texto1">Total</span>
+      <script></script>
+    </div>
+    
+    <footer id="pie">
+          Derechos Reservados &copy; 2022-2022
+         </footer>
+    
 </body>
 </html>
-
