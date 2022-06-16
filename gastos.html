@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA VENTAS</title>
     <link href="/css/estilo.css"
     rel="stylesheet" type="text/css">
-    <h1>LISTA VENTAS.</h1> 
-  </head>
-
-  <body> 
-    <div class="contenedor1">
-      <table class="default">
+   <script type="text/javascript" src= "../js/puentegastos.js"  charset = "utf-8"></script>
+  
+ 
+    <title>REGISTRO GASTOS</title>
+</head>
+<body>
+    <div class="contenedor" >
+       
+        <h2>AGREGAR DATOS VENTAS</h2>  
+      <form method="POST" action="../php/ventas1.php" >
+            FECHA:</br> 
+            <input type="date" class="formulario" name="Fecha"></br>
+            PRODUCTO:</br> 
+            <input type="text" class="formulario" name="Producto"></br>
+            DESCRIPCION:</br> 
+            <input type="text" class="formulario" name="Descripcion"></br>
+            VALOR_TOTAL:</br> 
+            <input type="text" class="formulario" name="Valor_Total"></br></br>
+            <button>Agregar</button>
+      </form>  
+    </div> 
+  
+    <div class="contenedor1" >
+  
+    </div> 
+  
+    <div class="contenedor2">
+     <table class="default">
         <thead>
           <tr>
-          <td>FECHA</td>
-          <td>PRODUCTO</td>
-          <td>DESCRIPCION</td>
-          <td>VALOR_TOTAL</td>
+            <td>FECHA</td>
+            <td>PRODUCTO</td>
+            <td>DESCRIPCION</td>
+            <td>VALOR_TOTAL</td>
           </tr>
         </thead>  
         <tbody id="datostabla"></tbody>
+        <script>buscar()</script>  
       </table>
-  
-    </div>  
-    <div class="contenedor2">
-      <table class="default1">
-        <thead>
-          <tr>
-            <td>VALOR TOTAL</td>
-            <td>CANTIDAD</td>
-          </tr>   
-        </thead>  
-        <tbody id="datostabla1"></tbody>
-      </table>
-  
     </div>
     
-      </body>
+    <div id="columna">
+      <span id="texto">Cantidad</span>
+      
+    </div>
+
+    <div id="columna1">
+      <span id="texto1">Total</span>
+      <script>buscarcalculo()</script>
+    </div>
+    
+    <footer id="pie">
+          Derechos Reservados &copy; 2022-2022
+         </footer>
+    
+</body>
 </html>
