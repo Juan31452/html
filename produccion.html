@@ -31,13 +31,13 @@
     <br>
     <div id = "fecha">
       <span name ="mesactual" id="mesactual">Mes</span>
-      <script>fecha()</script>
+      
     </div>
   </br> 
     <div id="buscarfecha" >
       <form method="GET" >
         <h4>Busque por Mes y Año</h4>
-        <select name="mes" id="mes">
+        <select name="mes" id="mes" onChange="buscar()">
             <option>01</option>
             <option>02</option>
             <option>03</option>
@@ -52,11 +52,11 @@
             <option>12</option>
             <option>Todo</option>                      
         </select>
-        <select name="año" id="año">
+        <select name="año" id="año" onChange="buscarcalculo()">
             <option>2022</option>
             <option>2021</option>  
         </select>
-        <input id="boton" type="submit" name ="enviar" onclick=buscar1() value="BUSCAR" />
+        
     </form>
 
     </div> 
