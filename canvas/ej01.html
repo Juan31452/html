@@ -17,34 +17,53 @@
   var ctx = canvas.getContext("2d");
   var ballRadius = 10;
   var x = 100;
-  var y = 50;
+  var y = 80;
   var dx = 2;
   //var dy = -1;    
   var rightPressed = false;
   var leftPressed = false;
+  var abajo = false;
+  var arriba = false;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+  document.addEventListener("keydown", keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
 
-function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
-}
-function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
-}
+  function keyDownHandler(e) 
+  {
+       if(e.keyCode == 39) {
+           rightPressed = true;
+        }
+        else if(e.keyCode == 37) {
+            leftPressed = true;
+        }
+        else if(e.keyCode == 40) {
+            abajo = true;
+        } 
+        else if(e.keyCode == 38) {
+            arriba = true;
+        }
+  }
 
-function crearbola() 
-    {
+  function keyUpHandler(e) 
+  {
+     if(e.keyCode == 39) {
+         rightPressed = false;
+       }
+     else if(e.keyCode == 37) {
+         leftPressed = false;
+       }
+     else if(e.keyCode == 40) {
+         abajo = false;
+        }
+    
+     else if(e.keyCode == 38) {
+         arriba = false;
+       }
+     
+  }
+
+   function crearbola() 
+   {
      ctx.beginPath();
      ctx.arc(x, y, ballRadius, 0, Math.PI*2);
      ctx.fillStyle = "#0095DD";
@@ -53,16 +72,26 @@ function crearbola()
     }
 
 
-function mover() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    crearbola();
-    if(rightPressed && x < canvas.width-ballRadius) {
-        x += 7;
-    }
-    else if(leftPressed && x > 0) {
-        x -= 7;
-    }
+    function mover() 
+    {
+    //borrar grafico mientras se mueve
+     ctx.clearRect(0, 0, canvas.width, canvas.height);
+     crearbola();
+     if(rightPressed && x < canvas.width-ballRadius) {
+        x += 4;
+     }
+     else if(leftPressed && x > 0) {
+        x -= 4;
+     }
+     
+     if(abajo && y < canvas.width-ballRadius) {
+        y += 4;
+     }
+     else if(arriba && y > 0) {
+        y -= 4;
+     }
     
+
     }
 
   setInterval(mover, 10);
