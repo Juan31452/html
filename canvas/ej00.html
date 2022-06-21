@@ -5,7 +5,7 @@
     <title>Gamedev Canvas Workshop</title>
     <style>
     	* { padding: 0; margin: 1; }
-    	canvas { background: rgb(166, 223, 154); display: block; margin: 0 auto; }
+    	canvas { background: rgb(154, 182, 223); display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -15,27 +15,29 @@
 <script>
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    var x = canvas.width/2;
-    var y = canvas.height-30;
-    var dx = 5;
-    var dy = 2;
+    var x = 100;
+    var y = 50;
+    var dx = 2;
+    //var dy = -1;
+    
 
-    function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-}
+    function crearbola() 
+    {
+     ctx.beginPath();
+     ctx.arc(x, y, 10, 0, Math.PI*2);
+     ctx.fillStyle = "#0095DD";
+     ctx.fill();
+     ctx.closePath();
+    }
 
-function draw() {
+    function mover() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
+    crearbola();
     x += dx;
-    y += dy;
+    //y += dy;
 }
-
-setInterval(draw, 10);
+    
+setInterval(mover, 10);
 </script>
 
 </body>
