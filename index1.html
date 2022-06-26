@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+     <meta charset="iso-8859-1">
+     <meta name="description" content="Ejemplo de HTML5">
+     <meta name="keywords" content="HTML5, CSS3, JavaScript">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PAGINA PRINCIPAL</title>
+     
+     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+     <link rel="stylesheet" type="text/css" href="../css/emenu.css">
+     <link rel="stylesheet" type="text/css" href="../css/animacion.css">
+  </head>
+
+  <body>
+    <div id=principal> 
+       <header id="cabecera">
+          
+          <p>
+             <h1>BIENVENIDO</h1>
+          </p>
+          <p>
+             <h4>
+                  <script>
+                     var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                     var f=new Date();
+                     document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+                  </script> 
+             </h4> 
+          </p>
+     </header>
+
+       <input type="checkbox" id="botonmenu">
+       <label for="botonmenu">
+          <img class="imagenmenu"
+          src="../img/open-menu.png" alt="">
+       </label >
+
+       <nav  class="menu">
+          <ul>
+               <li><a href="">Inicio </a> </li>
+               <li><a href="../html/productosver.html">Productos</a></li>
+               <li><a href="/tienda/html/historia.html">Historia</a></li>
+               <li><a href="/tienda//html/contactos.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+        <section class="contenedor1">
+           <article>
+             <p>
+                <h2>
+                   LIMON TAHITI
+                 </h2>
+              </p>
+              <p>
+                <img class="imagenp" 
+                src="../img/Limon2021.jpg" 
+                alt="imagenlimon1"> 
+              </p>
+           </article>
+
+            <article>   
+               <p>
+                  <h3>
+                     El limón es un auténtico tesoro nutricional y muy beneficioso para nuestra salud. Es una fruta curativa por excelencia, porque nos aporta vitaminas, elimina toxinas y es un poderoso bactericida, por lo que la OMS recomienda su consumo regular.
+                 </h3>
+               </p>       
+            </article>
+         
+            <article>   
+               <p>
+                  <h3>
+                    Tambien conocida como lima de Tahiti, lima persa, limon mesina, limon sin semilla o lima Bearss (nombrada asi en honor de John T. Bearss, quien desarrollo esta variedad sin semillas hacia 1895 en un vivero de Porteville , California ,EEUU.)
+                  </h3>
+               </p>       
+            </article>
+
+         </section>
+
+      
+      
+      <footer id="pie">
+            Derechos Reservados &copy; 2021-2021
+         </footer>
+   </div>
+</body>
+</html>
