@@ -5,7 +5,7 @@
     <title>Gamedev Canvas Workshop</title>
     <style>
     	* { padding: 0; margin: 1; }
-    	canvas { background: rgb(154, 182, 223); display: block; margin: 0 auto; }
+    	canvas { background: rgb(162, 223, 154); display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -19,7 +19,7 @@
     var y = canvas.height/2;
     var ballRadius = 10;
     var dx = 2;
-    //var dy = -1;
+    var dy = -2;
     
 
     function crearbola() 
@@ -36,10 +36,14 @@
     crearbola();
     if( x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
-     }
-     
+    }
+    
+    if( y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+        dy = -dy;
+    }
+    
     x += dx;//actualiza pocision
-    //y += dy;
+    y += dy;
 }
     
 setInterval(mover, 20);
